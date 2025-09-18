@@ -39,7 +39,8 @@ body {
     margin: 0;
     padding: 2rem;
     line-height: 1.6;
-    position: relative; /* Needed for the pseudo-element */
+    position: relative;
+    /* Needed for the pseudo-element */
     overflow-x: hidden;
 }
 
@@ -47,22 +48,22 @@ body::before {
     content: '';
     position: absolute;
     top: 0%;
-    left: 0%; 
-    width: 100%; 
-    height: 100%; 
-    background: 
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background:
         repeating-linear-gradient(135deg,
-        rgb(var(--base)) 0px ,
-        rgb(var(--base)) 33px ,
-        rgb(var(--mantle)) 33px ,
-        rgb(var(--mantle)) 66px ,
-        rgba(var(--crust)) 66px,
-        rgba(var(--crust)) 100px
-    );
+            rgb(var(--base)) 0px,
+            rgb(var(--base)) 33px,
+            rgb(var(--mantle)) 33px,
+            rgb(var(--mantle)) 66px,
+            rgba(var(--crust)) 66px,
+            rgba(var(--crust)) 100px);
     background-repeat: repeat;
     background-size: 100% 100%;
     /*filter: brightness(0.7) blur(0px);*/
-    z-index: -4; /* Lower z-index to ensure the cube is visible */
+    z-index: -4;
+    /* Lower z-index to ensure the cube is visible */
     box-shadow: none;
 }
 
@@ -73,21 +74,27 @@ body::after {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(var(--mantle), 0.0); /* Adds a dark overlay */
-    z-index: -1; /* Places it above the blurred background */
-    box-shadow: none; /* Ensures no vignette effect */
+    background: rgba(var(--mantle), 0.0);
+    /* Adds a dark overlay */
+    z-index: -1;
+    /* Places it above the blurred background */
+    box-shadow: none;
+    /* Ensures no vignette effect */
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
-    z-index: 1; /* Ensures content is above the background and overlay */
+    z-index: 1;
+    /* Ensures content is above the background and overlay */
 }
 
 header {
-    background-color: rgba(var(--mantle), 0.7); /* Mantle with 70% opacity */
-    backdrop-filter: blur(10px); /* Adds blur effect to the header background */
+    background-color: rgba(var(--mantle), 0.7);
+    /* Mantle with 70% opacity */
+    backdrop-filter: blur(10px);
+    /* Adds blur effect to the header background */
     padding: 2rem;
     text-align: center;
     border-radius: 8px;
@@ -139,17 +146,73 @@ section {
 }
 
 .project-card {
-    background-color: rgba(var(--surface2), 0.3);
+    background-color: rgba(var(--crust), 0.8);
+    position: relative;
     backdrop-filter: blur(5px);
     padding: 1.5rem;
+    margin: 0.5rem;
     border-radius: 8px;
-    transition: transform 0.2s, box-shadow 0.2s;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); */
+    transition: background 0.2s 0.0s, backdrop-filter 0.2s 0.2s, padding 0.2s, margin 0.2s;
+}
+
+.project-card::after,
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    translate: -50% -50%;
+    border-radius: 8px;
+    pointer-events: none;
+    z-index: -1;
+    background: conic-gradient(from var(--angle),
+            transparent 20%,
+            rgb(var(--red)) 30%,
+            transparent 40%,
+            transparent 70%,
+            rgb(var(--yellow)) 80%,
+            transparent 90%);
+    padding: 2px;
+    opacity: 0;
+    animation: 3s spin linear infinite;
+    transition: opacity 0.2s -0.2s;
+}
+
+.project-card::before {
+    filter: blur(20px);
+}
+
+.project-card:hover::after,
+.project-card:hover::before {
+    opacity: 1.0;
+    transition: opacity 0.2s 0.2s;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+
+    to {
+        --angle: 360deg;
+    }
 }
 
 .project-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 6px 10px rgba(var(--maroon), 0.5);
+    background: rgb(var(--mantle));
+    transition: background 0.2s, backdrop-filter 0.0s 0.0s, padding 0.2s, margin 0.2s;
+    backdrop-filter: none;
+    padding: 2.5rem;
+    margin: 0rem;
 }
 
 .project-card h3 a {
