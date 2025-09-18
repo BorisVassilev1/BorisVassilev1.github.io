@@ -176,7 +176,7 @@ section {
             transparent 70%,
             rgb(var(--yellow)) 80%,
             transparent 90%);
-    padding: 2px;
+    padding: 4px;
     opacity: 0;
     animation: 3s spin linear infinite;
     transition: opacity 0.2s -0.2s;
@@ -241,6 +241,10 @@ section {
 .project-card p {
     color: var(--subtext0);
     margin-top: 1rem;
+}
+
+a {
+	all: unset;
 }
 
 .links {
