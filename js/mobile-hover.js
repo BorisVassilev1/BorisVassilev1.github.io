@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const viewportHeight = window.innerHeight;
                 const cardCenter = rect.top + rect.height / 2;
                 const viewportCenter = viewportHeight / 2;
-                const threshold = viewportHeight * 0.2; // 20% tolerance
+                const threshold = viewportHeight * 0.3; // 20% tolerance
                 
                 if (Math.abs(cardCenter - viewportCenter) < threshold) {
                     entry.target.classList.add('mobile-hover');
@@ -22,8 +22,8 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }, {
-        threshold: [0.3, 0.5, 0.7],
-        rootMargin: '-20% 0px -20% 0px'
+        threshold: [0.3, 0.7],
+        rootMargin: '-40% 0px -40% 0px'
     });
     
     projectCards.forEach(card => observer.observe(card));

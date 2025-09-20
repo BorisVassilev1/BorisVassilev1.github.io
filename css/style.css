@@ -264,7 +264,7 @@ a {
     color: var(--sky);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
     body {
         font-size: 16px;
     }
@@ -275,7 +275,8 @@ a {
 
     .project-card.mobile-hover {
         background: rgb(var(--mantle));
-        max-height: 500px;
+        max-height: 500px; /* Expanded height to reveal the image */
+        transition: max-height 0.5s ease, background 0.2s, padding 0.2s, margin 0.2s, backdrop-filter 0.0s 0.0s;
         padding: 2.5rem;
         margin: 0rem;
         backdrop-filter: none;
