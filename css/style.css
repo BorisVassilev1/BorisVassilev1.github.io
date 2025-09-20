@@ -272,4 +272,21 @@ a {
     section {
         padding: 1rem;
     }
+
+    .project-card.mobile-hover {
+        background: rgb(var(--mantle));
+        max-height: 500px;
+        padding: 2.5rem;
+        margin: 0rem;
+        backdrop-filter: none;
+    }
+    
+    .project-card.mobile-hover::after,
+    .project-card.mobile-hover::before {
+        opacity: 1.0;
+    }
+    
+    .project-card.mobile-hover img {
+        opacity: 1;
+    }
 }
