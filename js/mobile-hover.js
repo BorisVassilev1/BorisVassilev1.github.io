@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }, {
-        threshold: [0.3, 0.7],
+        threshold: [0.2, 0.5, 0.8],
         rootMargin: '-40% 0px -40% 0px'
     });
     
