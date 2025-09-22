@@ -171,10 +171,10 @@ section {
     z-index: -1;
     background: conic-gradient(from var(--angle),
             transparent 20%,
-            rgb(var(--red)) 30%,
+            rgb(var(--blue)) 30%,
             transparent 40%,
             transparent 70%,
-            rgb(var(--yellow)) 80%,
+            rgb(var(--green)) 80%,
             transparent 90%);
     padding: 4px;
     opacity: 0;
@@ -219,9 +219,9 @@ section {
 
 .project-card img {
     display: block; /* Ensure the image is part of the layout */
-    width: 100%;
-    max-height: 200px; /* Ensure the image fits within the card */
-    max-width: 200px;
+    width: 90%;
+    max-height: 100%; /* Ensure the image fits within the card */
+    max-width: 100%; /**/
     object-fit: cover; /* Maintain aspect ratio and cover the available space */
     margin: 1rem auto 0 auto; /* Center horizontally with top margin */
     border-radius: 8px;
