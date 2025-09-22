@@ -13,41 +13,54 @@
 		<header>
 			<h1>Boris Vassilev</h1>
 			<nav>
-				<a href="https://github.com/BorisVassilev1" target="_blank">GitHub</a>
-				<a href="https://linkedin.com/in/cdnomlqko" target="_blank">LinkedIn</a>
-				<a href="mailto:borisnv@uni-sofia.bg">Email</a>
+				<a class="cool-border" href="https://github.com/BorisVassilev1" target="_blank">GitHub</a>
+				<a class="cool-border" href="https://linkedin.com/in/cdnomlqko" target="_blank">LinkedIn</a>
+				<a class="cool-border" href="mailto:borisnv@uni-sofia.bg">Email</a>
 			</nav>
 		</header>
 
-		<section class="about">
-			<p>Hello world! This is my portfolio site!</p>
-			<p>It is to be improved in the near future...</p>
+		<section>
+			<div class="row">
+				<!--div class="column">
+					<image src="https://thumbs.dreamstime.com/b/test-icon-vector-question-mark-male-user-person-profile-avatar-symbol-help-sign-glyph-pictogram-test-icon-vector-168495430.jpg"
+						   alt="Profile Picture"
+						   width="10%"
+						   class="profile-pic">
+				</div-->
+
+				<div class="column about">
+					<h2 style="align: center;">About Me</h2>
+					<p>I am a computer science student at Sofia University, currently in my 4th year. I have a strong passion for computer graphics and game development, and I am eager to apply my skills in real-world projects.</p>
+					<p>In my free time, I enjoy exploring new technologies, contributing to open-source projects, and working on personal coding projects that challenge my abilities and expand my knowledge.</p>
+				</div>
+			</div>
 		</section>
 
 		<section class="projects">
 			<h2>Projects</h2>
 			<div class="project-grid" id="list">
-				<a class="project-card" href="https://github.com/BorisVassilev1/JAVA/tree/master/LWJGL%203/JGLUtil" data-time="2021">
+				<!--
+					<a class="project-card" href="https://github.com/BorisVassilev1/JAVA/tree/master/LWJGL%203/JGLUtil" data-time="2021">
 					<h3>
-						JGLUtil
+					JGLUtil
 					</h3>
 					<p>A wrapper for OpenGL in Java made with LWJGL, featuring a GPU path tracer.</p>
 					<img src="https://raw.githubusercontent.com/BorisVassilev1/JAVA/master/LWJGL%203/JGLUtil/res/images/image_24.png"
-						 alt="JGLUtil Project Image">
+					alt="JGLUtil Project Image">
 					<img src="https://raw.githubusercontent.com/BorisVassilev1/JAVA/master/LWJGL%203/JGLUtil/res/images/image_7.png"
-						 alt="JGLUtil Project Image">
-				</a>
+					alt="JGLUtil Project Image">
+					</a>
 
-				<a class="project-card" href="https://github.com/BorisVassilev1/JAVA/tree/master/ProektPaint" data-time="2021">
+					<a class="project-card" href="https://github.com/BorisVassilev1/JAVA/tree/master/ProektPaint" data-time="2021">
 					<h3>
-						Paint
+					Paint
 					</h3>
 					<p>A program with basic drawing functionality, written in Java with WindowBuilder. This was a school
 					project made in 8th grade.</p>
 					<img src="https://raw.githubusercontent.com/BorisVassilev1/JAVA/refs/heads/master/ProektPaint/boiler.jpeg"
-						 alt="JGLUtil Project Image">
-				</a>
-
+					alt="JGLUtil Project Image">
+					</a>
+				-->
 				<a class="project-card" href="https://github.com/BorisVassilev1/yoghurtgl" data-time="2022">
 					<h3>
 						YoghurtGL
@@ -80,7 +93,7 @@
 				</a>
 				<a class="project-card" href="https://github.com/BorisVassilev1/np-project" data-time="2024">
 					<h3>
-						HTTP Server
+						C++ HTTP Server
 					</h3>
 					<p>A simple HTTP server written in C++ with multithreading support. Implements an interface similar to that of Node.js Express.</p>
 					<img src="./server-2.svg"
@@ -90,7 +103,7 @@
 					<h3>
 						N-body simulation
 					</h3>
-					<p>A study of implementation of GPU N-body simulation. Uses YoghurtGL as a base and run on GPU</p>
+					<p>A study of implementation of parallel N-body simulation. Uses YoghurtGL as a base and run on GPU</p>
 					<img src="https://github.com/BorisVassilev1/spo_project/blob/master/doc/frame1.jpg?raw=true"
 						 alt="N-body Project Image" width="50%">
 				</a>
@@ -98,25 +111,36 @@
 					<h3>
 						System Programming Project
 					</h3>
-					<p>A multithreaded task system in C++ with priorities aim for real-data-time-ness</p>
+					<p>A multithreaded task system in C++ with priorities aim for real-time-ness. This is a university course project.</p>
 					<img src="./bullet-camera-svgrepo-com.svg"
 						 alt="System Programming Project Image" width="75px">
 				</a>
 				<a class="project-card" href="https://borisvassilev.itch.io/simplified-pacman" data-time="2023">
 					<h3>
-						Pacman 
+						Pacman
 					</h3>
-					<p>A simplified Pacman clone made using YoghurtGL. </p>
+					<p>A simplified Pacman clone made using YoghurtGL. Made in a week for a job interview.</p>
 					<img src="https://img.itch.zone/aW1hZ2UvMjI0NDc4NC8xMzMwMDIxNi5wbmc=/347x500/rRG55O.png"
 						 alt="Game Jam Project Image">
 				</a>
-				<a class="project-card" href="https://github.com/BorisVassilev1/FMI-Design-Patterns" data-time="2024">
+				<!--
+					<a class="project-card" href="https://github.com/BorisVassilev1/FMI-Design-Patterns" data-time="2024">
 					<h3>
-						Design Patterns in C++
+					Design Patterns in C++
 					</h3>
 					<p>University course project showcasing different design patterns in C++.</p>
 					<img src="https://minecraft.wiki/images/Observer_JE4_BE3.png?39c33"
-						 alt="Design Patterns Project Image">
+					alt="Design Patterns Project Image">
+					</a>
+				-->
+				<a class="project-card" href="https://github.com/boytchev/3d-assets" data-time="2024">
+					<h3>
+						Procedural 3D Assets
+					</h3>
+					<p>A collection of procedural 3D assets for Three.js projects. Includes furniture, electronics, and household items. 
+					Examples float in the background of this page. </p>
+					<img src="https://camo.githubusercontent.com/a5b638457b97a30fac98821f7400abbc0af3ff8d3e6e31790de21579d14baef9/68747470733a2f2f626f7974636865762e6769746875622e696f2f33642d6173736574732f64656d6f732f64656d6f2d6d7567732e6a7067"
+						 alt="3D Assets Project Image">
 				</a>
 				THIS IS THE END
 			</div>
@@ -268,7 +292,7 @@
 		var parent = document.getElementById('list');
 		parent.innerHTML = "";
 		for(var i = 0, l = toSort.length; i < l; i++) {
-		    parent.appendChild(toSort[i]);
+			parent.appendChild(toSort[i]);
 		}
 
 	</script>
